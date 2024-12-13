@@ -1,0 +1,212 @@
+/* 设定页面字体和背景 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #495057;
+    margin: 0;
+    padding: 0;
+}
+
+/* 容器居中并适应不同屏幕大小 */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题居中样式 */
+h2.text-center {
+    font-size: 28px;
+    color: #dc3545;
+    text-align: center;  /* 标题居中 */
+    margin-bottom: 30px;
+}
+
+/* 按钮样式 */
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* 增加顶部间距 */
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+#start-socket-btn {
+    background-color: #dc3545;
+    color: #fff;
+    width: 100%; /* 按钮宽度100% */
+}
+
+#start-socket-btn:hover {
+    background-color: #c82333;
+}
+
+#submit-private-key {
+    background-color: #dc3545;
+    color: #fff;
+    width: 100%;
+}
+
+#submit-private-key:hover {
+    background-color: #c82333;
+}
+
+#decrypt-button {
+    background-color: #007bff;
+    color: #fff;
+    width: 100%;
+}
+
+#decrypt-button:hover {
+    background-color: #0056b3;
+}
+
+#save-file-btn {
+    background-color: #28a745;
+    color: #fff;
+    width: 100%;
+}
+
+#save-file-btn:hover {
+    background-color: #218838;
+}
+
+#refresh-btn {
+    background-color: #17a2b8;
+    color: #fff;
+    width: 100%;
+}
+
+#refresh-btn:hover {
+    background-color: #138496;
+}
+
+/* 输入框、下拉框样式 */
+.form-control {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 15px; /* 增加底部间距 */
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+/* 标签样式 */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px; /* 增加顶部间距 */
+    margin-bottom: 8px; /* 标签和输入框之间的间距 */
+}
+
+/* 页面元素的间距调整 */
+.mt-3 {
+    margin-top: 30px;
+}
+
+.mt-5 {
+    margin-top: 50px;
+}
+
+/* 上传文件区域 */
+#file-upload-section {
+    display: none; /* 默认隐藏 */
+    margin-top: 20px; /* 增加顶部间距 */
+}
+
+/* 使 textarea 的高度适应内容 */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* 解密结果区域 */
+#decrypt-output {
+    margin-top: 30px;
+}
+
+/* 文件列表样式 */
+#file-list {
+    margin-top: 30px;
+}
+
+#file-list-ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#file-list-ul li {
+    margin-bottom: 10px;
+}
+/* 文件列表部分的标题 */
+#file-list h5 {
+    font-size: 18px; /* 增大字体大小 */
+    font-weight: bold; /* 加粗字体 */
+    color: #007bff; /* 使用蓝色来突出显示 */
+    margin-bottom: 15px; /* 增加底部间距 */
+    text-align: left; /* 左对齐 */
+}
+
+
+/* 显示错误和提示信息 */
+.alert {
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.alert-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+/* 增加按钮与下面内容的间距 */
+#start-socket-btn {
+    margin-bottom: 30px;  /* 增加按钮底部的间距 */
+}
+
+#submit-private-key{
+    margin-bottom: 30px;
+}
+
+
+/* 返回主页面按钮样式 */
+#back-home-btn {
+    background-color: #6c757d;  /* 灰色按钮 */
+    color: #fff;
+    width: 100%;  /* 按钮宽度100% */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;  /* 增加顶部间距 */
+    transition: background-color 0.3s ease;
+}
+
+#back-home-btn:hover {
+    background-color: #5a6268;  /* 鼠标悬停时变暗 */
+}

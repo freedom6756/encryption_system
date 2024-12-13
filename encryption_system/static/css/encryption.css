@@ -1,0 +1,181 @@
+/* 设定页面字体和背景 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #495057;
+    margin: 0;
+    padding: 0;
+}
+
+/* 容器居中并适应不同屏幕大小 */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题居中样式 */
+h2.text-center {
+    font-size: 28px;
+    color: #28a745;
+    text-align: center;  /* 标题居中 */
+    margin-bottom: 30px;
+}
+
+/* 按钮样式 */
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* 增加顶部间距 */
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+#connect-button {
+    background-color: #28a745;
+    color: #fff;
+    width: 100%; /* 按钮宽度100% */
+}
+
+#connect-button:hover {
+    background-color: #218838;
+}
+
+#exchange-key-btn {
+    background-color: #17a2b8;
+    color: #fff;
+    width: 100%;
+}
+
+#exchange-key-btn:hover {
+    background-color: #138496;
+}
+
+#encrypt-button {
+    background-color: #007bff;
+    color: #fff;
+    width: 100%;
+}
+
+#encrypt-button:hover {
+    background-color: #0056b3;
+}
+
+#send-button {
+    background-color: #ffc107;
+    color: #212529;
+    width: 100%;
+}
+
+#send-button:hover {
+    background-color: #e0a800;
+}
+
+/* 输入框、下拉框样式 */
+.form-control {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 15px; /* 增加底部间距 */
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+/* 标签样式 */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px; /* 增加顶部间距 */
+}
+
+/* 页面元素的间距调整 */
+.mt-3 {
+    margin-top: 30px;
+}
+
+.mt-5 {
+    margin-top: 50px;
+}
+
+/* 上传文件区域 */
+#file-upload-section {
+    display: none; /* 默认隐藏 */
+    margin-top: 20px; /* 增加顶部间距 */
+}
+
+/* 使 textarea 的高度适应内容 */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* 进度条部分 */
+#progress-bar {
+    height: 20px;
+    width: 0;
+    background-color: #007bff;
+    transition: width 0.5s ease-in-out;
+    margin-top: 20px;
+}
+
+/* 显示错误和提示信息 */
+.alert {
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.alert-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+#exchange-key-btn{
+    margin-bottom: 30px;
+}
+
+#connect-button{
+    margin-bottom: 30px;
+}
+
+/* 返回主页面按钮样式 */
+#back-home-btn {
+    background-color: #6c757d;  /* 灰色按钮 */
+    color: #fff;
+    width: 100%;  /* 按钮宽度100% */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;  /* 增加顶部间距 */
+    transition: background-color 0.3s ease;
+}
+
+#back-home-btn:hover {
+    background-color: #5a6268;  /* 鼠标悬停时变暗 */
+}
+
+

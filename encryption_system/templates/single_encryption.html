@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/single_encryption.js') }}" defer></script>
+</head>
+<body>
+<div class="container">
+    <div class="left-side">
+        <div class="header">
+            <h1>单机加解密系统</h1>
+        </div>
+        <input type="text" id="search" placeholder="搜索加密算法..." onkeyup="filterAlgorithms()">
+
+        <ul id="algorithm-list">
+            <!-- 单表替代密码 分类 -->
+            <li class="category" onclick="toggleCategory('substitution')">
+                <span class="arrow">►</span> 单表替代密码
+            </li>
+            <ul id="substitution" class="sub-list">
+                <li data-algorithm="caesar_crypto">Caesar Cipher</li>
+                <li data-algorithm="keyword_crypto">Keyword Cipher</li>
+                <li data-algorithm="affine_crypto">Affine Cipher</li>
+                <li data-algorithm="multiliteral_crypto">Multiliteral Cipher</li>
+            </ul>
+
+            <!-- 多表替代密码 分类 -->
+            <li class="category" onclick="toggleCategory('polyalphabetic')">
+                <span class="arrow">►</span> 多表替代密码
+            </li>
+            <ul id="polyalphabetic" class="sub-list">
+                <li data-algorithm="vigenere_crypto">Vigenere Cipher</li>
+                <li data-algorithm="autokey_plaintext_crypto">Autokey Plaintext</li>
+                <li data-algorithm="autokey_ciphertext_crypto">Autokey Ciphertext</li>
+            </ul>
+
+            <li class="category" onclick="toggleCategory('polygraphic')">
+                <span class="arrow">►</span> 多图替代密码
+            </li>
+            <ul id="polygraphic" class="sub-list">
+                <li data-algorithm="playfair_crypto">Playfair Cipher</li>
+                <li data-algorithm="double_playfair_crypto">Double Playfair Cipher</li>
+            </ul>
+
+
+            <!-- 置换密码 分类 -->
+            <li class="category" onclick="toggleCategory('transposition')">
+                <span class="arrow">►</span> 置换密码
+            </li>
+            <ul id="transposition" class="sub-list">
+                <li data-algorithm="permutation_crypto">Permutation Cipher</li>
+                <li data-algorithm="column_permutation_crypto">Column Permutation Cipher</li>
+                <li data-algorithm="double_transposition_crypto">Double Transposition Cipher</li>
+            </ul>
+
+            <!-- 流密码 分类 -->
+            <li class="category" onclick="toggleCategory('stream')">
+                <span class="arrow">►</span> 流密码
+            </li>
+            <ul id="stream" class="sub-list">
+                <li data-algorithm="rc4_crypto">RC4</li>
+                <li data-algorithm="ca_crypto">CA</li>
+            </ul>
+
+            <!-- 分块密码 分类 -->
+            <li class="category" onclick="toggleCategory('block')">
+                <span class="arrow">►</span> 分块密码
+            </li>
+            <ul id="block" class="sub-list">
+                <li data-algorithm="aes_crypto">AES</li>
+                <li data-algorithm="aes_ecb_crypto">AES_ECB</li>
+            </ul>
+
+            <!-- 公钥密码 分类 -->
+            <li class="category" onclick="toggleCategory('public-key')">
+                <span class="arrow">►</span> 公钥密码
+            </li>
+            <ul id="public-key" class="sub-list">
+                <li data-algorithm="rsa_crypto">RSA</li>
+                <li data-algorithm="ecc_crypto">ECC</li>
+            </ul>
+
+            <li class="category" onclick="toggleCategory('hash')">
+                <span class="arrow">►</span> 哈希密码
+            </li>
+            <ul id="hash" class="sub-list">
+                <li data-algorithm="md5_crypto">MD5</li>
+            </ul>
+
+            <li class="category" onclick="toggleCategory('exchange')">
+                <span class="arrow">►</span> 密钥交换
+            </li>
+            <ul id="exchange" class="sub-list">
+                <li data-algorithm="dh_crypto">DH</li>
+                <li data-algorithm="ecdh_crypto">ECDH</li>
+            </ul>
+        </ul>
+
+        <button id="switch-to-dual" onclick="window.location.href='/'">返回到主页面</button>
+    </div>
+
+    <div class="right-side">
+        <div class="header">
+            <h1>加解密区域</h1>
+        </div>
+        <div id="operation-area">
+            <h2>选择一个加密算法开始</h2>
+            <form id="algorithm-form">
+                <!-- Dynamic inputs will be inserted here -->
+            </form>
+            <div id="output-area">
+                <!-- Dynamic output will be inserted here -->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

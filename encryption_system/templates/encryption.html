@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密端</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/encryption.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/encryption.js') }}" defer></script>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center">加密端</h2>
+
+    <form id="encryption-form" enctype="multipart/form-data">
+        <button type="button" id="connect-button" class="btn btn-success">连接到解密端</button>
+
+        <div id="key-exchange-section" class="mt-3" style="display: none;">
+            <label for="encryption-private-key">输入加密端私钥</label>
+            <input type="number" class="form-control" id="encryption-private-key" name="encryption-private-key" placeholder="输入加密端私钥">
+            <button type="button" class="btn btn-info mt-2" id="exchange-key-btn">交换密钥</button>
+        </div>
+
+        <label for="shared-key">共享密钥</label>
+        <input type="text" class="form-control" id="shared-key" name="shared-key" placeholder="输入共享密钥" readonly>
+
+        <div class="form-group mt-3">
+            <label for="encryption-algorithm">选择加密算法</label>
+            <select class="form-control" id="encryption-algorithm" name="encryption_algorithm">
+                <option value="AES">AES</option>
+                <option value="RSA">RSA</option>
+                <option value="RC4">RC4</option>
+            </select>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="message">输入消息</label>
+            <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="file-or-text">选择传输内容</label>
+            <select class="form-control" id="file-or-text" name="type">
+                <option value="text">传文字</option>
+                <option value="file">传文件</option>
+            </select>
+        </div>
+
+        <div id="file-upload-section" class="mt-3">
+            <label for="file-upload">上传文件</label>
+            <input type="file" class="form-control" id="file-upload" name="file">
+        </div>
+
+        <button type="button" id="encrypt-button" class="btn btn-primary mt-3">加密</button>
+
+        <div class="form-group mt-3">
+            <label for="ciphertext">密文</label>
+            <textarea class="form-control" id="ciphertext" name="ciphertext" rows="4" readonly></textarea>
+        </div>
+
+        <button type="button" id="send-button" class="btn btn-primary mt-3">发送</button>
+
+        <button id="back-home-btn" class="btn btn-secondary mt-3">返回主页面</button>
+    </form>
+</div>
+
+</body>
+</html>

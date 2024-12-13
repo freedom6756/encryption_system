@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加解密系统首页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1b2735, #090a0f);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* 背景视频 */
+        .fullscreen-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        /* 内容样式 */
+        .content {
+            text-align: center;
+            z-index: 2;
+        }
+        .content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #b0c4de;
+        }
+        /* 按钮组样式 */
+        .button-group {
+            display: inline-flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .button-group a {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(90deg, #007bff, #00c6ff);
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .button-group a:hover {
+            background: linear-gradient(90deg, #00c6ff, #007bff);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+        .button-group a:active {
+            transform: scale(0.98);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+        /* 设计人员信息 */
+        .design-info {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #7a869a;
+        }
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2.5rem;
+            }
+            .content p {
+                font-size: 1rem;
+            }
+            .button-group a {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景视频 -->
+    <video class="fullscreen-video" autoplay loop muted>
+        <source src="/static/video/Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- 内容 -->
+    <div class="content">
+        <h1>加解密系统</h1>
+        <p>提供单机和双机通信的高效加密解决方案，确保数据安全无忧。</p>
+        <div class="button-group">
+            <a href="single_encryption">单机加解密</a>
+            <a href="encryption">双机加密端</a>
+            <a href="decryption">双机解密端</a>
+        </div>
+        <p class="design-info">小组成员：杨广鹏、王星宇</p>
+    </div>
+</body>
+</html>

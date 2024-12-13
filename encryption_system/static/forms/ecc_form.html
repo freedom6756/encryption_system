@@ -1,0 +1,19 @@
+<label for="message">输入:</label>
+<input type="text" id="message" name="message" required><br>
+<label for="fileInput">上传文件:</label>
+<input type="file" id="fileInput" accept=".txt" onchange="handleFileUpload('fileInput', 'message')">
+
+<label for="private_key">私钥:</label>
+<input type="number" id="private_key" name="private_key" required><br>
+
+<label for="c1">密文C1的坐标:(x,y)</label>
+<input type="text" id="c1" name="c1"><br>
+
+<label for="c2">密文C2的坐标:(x,y)</label>
+<input type="text" id="c2" name="c2"><br>
+
+<button type="button" onclick="submitForm('ecc_crypto', 'encrypt')">加密</button>
+<button type="button" onclick="submitForm('ecc_crypto', 'decrypt')">解密</button>
+
+<!-- 新增清空输入框内容的按钮 -->
+<button type="button" onclick="clearInputs()">清空</button>

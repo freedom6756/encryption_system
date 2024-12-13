@@ -1,0 +1,17 @@
+<label for="message">输入:</label>
+<input type="text" id="message" name="message" required><br>
+<label for="fileInput">上传文件:</label>
+<input type="file" id="fileInput" accept=".txt" onchange="handleFileUpload('fileInput', 'message')">
+
+<label for="key_size">密钥长度:(可选)</label>
+<input type="text" id="key_size" name="key_size"><br>
+
+<label for="public_key">公钥:(可选)</label>
+<input type="text" id="public_key" name="public_key"><br>
+
+<label for="private_key">私钥:</label>
+<input type="text" id="private_key" name="private_key"><br>
+
+<button type="button" onclick="submitForm('rsa_crypto', 'encrypt')">加密</button>
+<button type="button" onclick="submitForm('rsa_crypto', 'decrypt')">解密</button>
+<button type="button" onclick="clearInputs()">清空</button>

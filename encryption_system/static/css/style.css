@@ -1,0 +1,257 @@
+/* 确保页面高度为100% */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置 body 样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 主容器，包含左侧和右侧 */
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* 左侧栏样式 */
+.left-side {
+    width: 25%;
+    height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 左侧栏头部样式 */
+.left-side .header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.left-side .header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* 搜索框样式 */
+.left-side input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* 右侧栏样式 */
+.right-side {
+    width: 75%; /* 右侧栏宽度占 75% */
+    height: 100%;
+    padding: 20px;
+    background-color: #ffffff; /* 白色背景 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* 柔和阴影 */
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 8px; /* 圆角 */
+    overflow: hidden;
+}
+
+/* 右侧栏头部样式 */
+.right-side .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0; /* 下边框 */
+    padding-bottom: 10px;
+}
+
+/* 头部标题 */
+.right-side .header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff; /* 主色调 */
+    margin: 0;
+}
+/* 算法列表样式 */
+#algorithm-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* 分类项的样式 */
+#algorithm-list .category {
+    cursor: pointer;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    background-color: #f0f8ff;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* 分类项悬停效果 */
+#algorithm-list .category:hover {
+    background-color: #e0f7fa;
+    transform: translateX(5px);
+}
+
+/* 算法项的样式 */
+#algorithm-list .sub-list li {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #e8f5e9;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* 算法项的 hover 效果 */
+#algorithm-list .sub-list li:hover {
+    background-color: #80e27e;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* 算法分类的箭头样式 */
+.arrow {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* 展开后的子列表样式 */
+.sub-list {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+/* 右侧栏样式 */
+.right-side {
+    width: 75%;
+    height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* 右侧栏头部样式 */
+.right-side .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 操作区域 */
+#operation-area {
+    margin-top: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 表单标签样式 */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+/* 表单输入框样式 */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* 表单按钮样式 */
+form button {
+    padding: 12px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* 按钮 hover 效果 */
+form button:hover {
+    background-color: #4cae4c;
+}
+
+/* 输出区域样式 */
+#output-area {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    /* 自动换行设置 */
+    white-space: pre-wrap; /* 保留换行符和空格，同时允许换行 */
+    word-wrap: break-word; /* 强制长单词换行 */
+    overflow-wrap: break-word; /* 强制长单词换行，保证溢出时能换行 */
+}
+
+
+/* 输出区域标题样式 */
+#output-area h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* 输出区域文本样式 */
+#output-area p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* 切换按钮样式 */
+#switch-to-dual {
+    margin-top: auto;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* 切换按钮 hover 效果 */
+#switch-to-dual:hover {
+    background-color: #0056b3;
+}
